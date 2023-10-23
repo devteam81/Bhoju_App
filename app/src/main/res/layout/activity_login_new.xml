@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@null">
+
+
+    <!--<androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_background"/>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_footer_bg"
+        android:visibility="gone">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_margin="16dp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <!--<LinearLayout
+        android:id="@+id/llLoginTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:weightSum="2"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="120dp"
+                android:background="@null"
+                android:text="@string/sign_up"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryHeader"
+                android:textSize="@dimen/sp_24"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="10dp"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"/>
+
+            <View
+                android:id="@+id/tvSignupSelector"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:background="@color/colorPrimaryHeader"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tvSignup"
+                android:layout_alignStart="@id/tvSignup"
+                android:layout_alignEnd="@+id/tvSignup"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="120dp"
+                android:background="@drawable/bg_background_popup_top"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_24"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"/>
+
+            <View
+                android:id="@+id/tvLoginSelector"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tvLogin"
+                android:layout_alignStart="@id/tvLogin"
+                android:layout_alignEnd="@+id/tvLogin"/>
+
+        </RelativeLayout>
+    </LinearLayout>-->
+
+</RelativeLayout>

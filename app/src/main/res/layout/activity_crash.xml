@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CrashActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            app:lottie_autoPlay="true"
+            android:visibility="visible"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="120dp"
+            app:lottie_fileName="crash.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_22"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:layout_gravity="center"
+            android:text="@string/an_unexpected_error_occured"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/restartApp"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_gravity="center"
+            android:text="@string/restart_app"/>
+
+
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

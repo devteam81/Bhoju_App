@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--New-->
+    <!--<color name="colorPrimary">#1A1A1A</color>
+    <color name="colorPrimaryLight">#252424</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#008489</color>-->
+
+    <color name="colorPrimary">#340C24</color>
+    <color name="colorPrimaryLight">#AB0162</color>
+    <color name="colorPrimaryHeader">#5E5E5E</color>
+    <color name="colorPrimaryDark">#2F302B</color>
+    <color name="colorAccent">#F7D141</color>
+    <color name="colorPrimaryTransparent">#50191A15</color>
+
+    <color name="editTextColor">#FFFFFF</color>
+    <color name="textColor">#9E9E9E</color>
+    <color name="buttonColor">#9B9B9B</color>
+    <color name="text_color">#A4C352</color>
+    <color name="button_background_color">#31322D</color>
+    <color name="pink">#ED008C</color>
+    <color name="select_theme_green">#401FBAA9</color>
+    <color name="tick">#41AD49</color>
+
+    <color name="button_color">#A2CE3C</color>
+    <color name="button_color_skip">#ED008C</color>
+
+    <color name="button_passcode_color">#A4005F</color>
+    <color name="button_disable_color">#6D0041</color>
+    <color name="button_extra_color">#FFFFFF</color>
+
+    <color name="download_bg1">#6D0041</color>
+    <color name="download_bg2">@android:color/transparent</color>
+
+    <!-- card library -->
+    <color name="blue_color">#22DCEA</color>
+    <color name="blue_color_new">#00ABB7</color>
+    <color name="semi_white">#88FFFFFF</color>
+
+    <!--<color name="theme_green">#88FFFFFF</color>-->
+
+    <color name="cross">#F05D40</color>
+
+    <!--App colors-->
+
+    <!--Search bar activeProfile activity-->
+    <!--Colors-->
+    <color name="light_gray">#dbdbdb</color>
+    <color name="gray">#7e7e7e</color>
+    <color name="dark_gray">#696969</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="transparentblack">#66000000</color>
+    <color name="transparentwhite">#66ffffff</color>
+    <color name="transparentlittlewhite">#90ffffff</color>
+
+    <!--Design colors-->
+    <color name="no_internet_bg">#893124</color>
+
+    <!--bg elemets color-->
+    <color name="element_gray">#595961</color>
+    <color name="element_green">#1fbaa9</color>
+    <color name="element_pink">#ed008c</color>
+
+    <!--Old-->
+    <!--<color name="Grey_400">#cfcfcf</color>-->
+    <color name="green">#228B22</color>
+    <color name="transparentgreen">#8000FF00</color>
+
+    <!--custom color-->
+    <color name="red">#FF0000</color>
+    <color name="redLight">#ff340c</color>
+    <color name="red_transparent">#70FF0000</color>
+
+
+    <color name="cardBackground">#444444</color>
+    <color name="light_red">#DF1D1D</color>
+    <color name="color_blue">#568CE3</color>
+    <color name="dark_blue">#00008B</color>
+    <color name="grey">#636366</color>
+    <color name="grey_1">#3a3a3c</color>
+    <color name="footer_bg">#202125</color>
+    <color name="theme_yellow">#F7D141</color>
+    <color name="yellow">#E3CE15</color>
+    <color name="theme_yellow_trans">#90F7D141</color>
+    <color name="theme_green">#1FBAA9</color>
+
+    <!-- Giraffee Player -->
+    <color name="Grey_400">#BDBDBD</color>
+    <color name="Grey_500">#9E9E9E</color>
+    <color name="Grey_600">#757575</color>
+    <color name="Grey_700">#616161</color>
+
+    <color name="silver">#BDBDBD</color>
+
+
+
+</resources>

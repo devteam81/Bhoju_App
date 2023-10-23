@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "569661193392",
+    "project_id": "bhoju-da5ce",
+    "storage_bucket": "bhoju-da5ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569661193392:android:8b0c9912e881d644f5cf75",
+        "android_client_info": {
+          "package_name": "com.bhoju.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569661193392-rrosnqjks74jbai5kj29br9uh1nkva57.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bhoju.app",
+            "certificate_hash": "3f85f803ed5e180e4b32207872c4c5724d509d1a"
+          }
+        },
+        {
+          "client_id": "569661193392-nr24qevlj765co558h5iipgohk78uen0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbsaxW5txOyq-b-1KZvPUJyKpflSXu8G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569661193392-nr24qevlj765co558h5iipgohk78uen0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

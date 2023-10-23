@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_subscribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingStart="@dimen/dp_25"
+        android:paddingEnd="@dimen/dp_25">
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/subscribe_bg">
+
+            <RelativeLayout
+                android:id="@+id/rl_month_details"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="125dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/rl_details"
+                    android:ellipsize="marquee"
+                    android:textColor="@color/colorPrimary"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"
+                    tools:text="Introductory sge srgh sgh"
+                    android:gravity="center"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/bg_subsribe_button_border">
+
+                    <LinearLayout
+                        android:id="@+id/ll_months"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMonths"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_25"
+                            android:textStyle="bold"
+                            tools:text="22" />
+
+                        <TextView
+                            android:id="@+id/tv_months"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center"
+                            android:text="@string/months"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_12"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_amount_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/rl_month_details"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <LinearLayout
+                    android:id="@+id/ll_Amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvFullPriceCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:gravity="center"
+                        android:text="@string/currency"
+                        android:textColor="@color/theme_yellow"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFullPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/theme_yellow"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold"
+                        tools:text="100" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPriceCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:gravity="center"
+                        android:text="@string/currency"
+                        android:textColor="@color/theme_yellow"
+                        android:textSize="@dimen/sp_24"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/theme_yellow"
+                        android:textSize="@dimen/sp_45"
+                        android:textStyle="bold"
+                        tools:text="100" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_big"
+                android:gravity="center_horizontal"
+                android:text="Get Started"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                android:paddingEnd="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_8"
+                android:layout_below="@+id/ll_amount_details"
+                android:layout_toEndOf="@+id/rl_month_details"
+                android:layout_marginStart="@dimen/dp_40" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/subscription_text_bg"
+        android:layout_alignStart="@id/rl_subscribe"
+        android:layout_alignEnd="@id/rl_subscribe"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_25"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5">
+
+        <TextView
+            android:id="@+id/txt_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            tools:text="@string/months" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unlimited access to All Content (No Auto-Renew)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10" />
+    </LinearLayout>
+
+</RelativeLayout>

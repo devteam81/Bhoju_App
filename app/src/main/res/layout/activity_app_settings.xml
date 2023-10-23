@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_background"
+        android:scaleType="fitXY"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                app:srcCompat="@drawable/ic_arrow_back"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="@string/app_settings"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_16"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar"
+            android:layout_margin="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_push_notifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/setting_top_bg"
+                    android:orientation="vertical">
+
+                    <!--Notifications-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/TextActivitySubHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dp_20"
+                            android:paddingTop="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_20"
+                            android:paddingBottom="@dimen/dp_10"
+                            android:text="@string/notifications"
+                            android:textColor="@color/colorPrimaryLight"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_notifications"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp_20"
+                                android:paddingTop="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_20"
+                                android:paddingBottom="@dimen/dp_10">
+
+
+                                <ImageView
+                                    android:id="@+id/bellIconPush"
+                                    android:layout_width="@dimen/dp_25"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:src="@drawable/ic_bell_notification"
+                                    app:tint="@color/button_extra_color"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_marginEnd="@dimen/dp_40"
+                                    android:layout_toEndOf="@id/bellIconPush"
+                                    android:text="@string/push_notifications"
+                                    android:textColor="@color/white" />
+
+                                <com.github.angads25.toggle.widget.LabeledSwitch
+                                    android:id="@+id/pushNotificationToggle"
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="0sp"
+                                    app:colorBorder="@color/colorPrimaryLight"
+                                    app:colorOff="@color/colorPrimaryLight"
+                                    app:colorOn="@color/theme_yellow"
+                                    app:on="false" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/pushNotificationToggleOld"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    app:trackTint="@color/green"
+                                    android:visibility="gone"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp_20"
+                                android:paddingTop="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_20"
+                                android:paddingBottom="@dimen/dp_10"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/bellIconEmail"
+                                    android:layout_width="@dimen/dp_25"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:src="@drawable/ic_bell_notification" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_marginEnd="@dimen/dp_40"
+                                    android:layout_toEndOf="@id/bellIconEmail"
+                                    android:text="@string/email_notifications"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/emailNotificationToggle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--Video-->
+                <LinearLayout
+                    android:id="@+id/pipSettingsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextActivitySubHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:text="@string/player" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryLight"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_20"
+                            android:paddingTop="@dimen/dp_10"
+                            android:paddingEnd="@dimen/dp_20"
+                            android:paddingBottom="@dimen/dp_10">
+
+                            <ImageView
+                                android:id="@+id/playIcon"
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:src="@drawable/ic_bell_notification" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:layout_toStartOf="@id/pipModeToggle"
+                                android:layout_toEndOf="@id/playIcon"
+                                android:maxLines="2"
+                                android:text="@string/picture_in_picture_mode"
+                                android:textColor="@color/white" />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:id="@+id/pipModeToggle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--About-->
+                <TextView
+                    style="@style/TextActivitySubHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:text="@string/about"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/bg_background_popup_top"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_background_popup_bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_10">
+
+                        <ImageView
+                            android:id="@+id/deviceIcon"
+                            android:layout_width="@dimen/dp_25"
+                            android:layout_height="@dimen/dp_25"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_device" />
+
+                        <TextView
+                            android:id="@+id/aboutDeviceHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:layout_toEndOf="@id/deviceIcon"
+                            android:text="@string/device"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/aboutDevice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/aboutDeviceHeader"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:layout_toEndOf="@id/deviceIcon"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_12"
+                            tools:text="@string/about_device" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--Diagnostic-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/setting_top_bg">
+
+
+                    <RelativeLayout
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            style="@style/TextActivitySubHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dp_20"
+                            android:paddingTop="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_20"
+                            android:paddingBottom="@dimen/dp_10"
+                            android:text="@string/diagnostics"
+                            android:textColor="@color/colorPrimaryLight"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_internet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text">
+
+                        <LinearLayout
+                            android:id="@+id/ll_internet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/checkNetworkTile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp_20"
+                                android:paddingTop="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_20"
+                                android:paddingBottom="@dimen/dp_10">
+
+                                <ImageView
+                                    android:id="@+id/checkNetwork"
+                                    android:layout_width="@dimen/dp_25"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_check_network"
+                                    app:tint="@color/button_extra_color"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_marginEnd="@dimen/dp_10"
+                                    android:layout_toEndOf="@id/checkNetwork"
+                                    android:text="@string/check_network"
+                                    android:textColor="@color/button_extra_color" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/speedTestTile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:visibility="gone"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp_20"
+                                android:paddingTop="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_20"
+                                android:paddingBottom="@dimen/dp_10">
+
+                                <ImageView
+                                    android:id="@+id/speedTest"
+                                    android:layout_width="@dimen/dp_25"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_speed_test" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_marginEnd="@dimen/dp_10"
+                                    android:layout_toEndOf="@id/speedTest"
+                                    android:text="@string/speed_test"
+                                    android:textColor="@color/white" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!-- Download Expiry -->
+                <RelativeLayout
+                    android:id="@+id/rl_download_validity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/bg_small">
+
+                    <TextView
+                        style="@style/TextActivitySubHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:text="@string/offline_video_validity"
+                        android:textColor="@color/button_extra_color"
+                        android:layout_centerVertical="true"/>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_25"
+                        android:src="@drawable/ic_edit_details"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+
+                <!-- App Version -->
+                <RelativeLayout
+                    android:id="@+id/rl_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/bg_small">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_version"
+                        style="@style/TextActivitySubHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:text="App version"
+                        android:textColor="@color/button_extra_color" />
+
+                    <RelativeLayout
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/app_version"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txt_Update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_3"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:text="@string/update"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/app_version"
+                        style="@style/TextActivitySubHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_10"
+                        android:text="1.0.1" />
+
+                </RelativeLayout>
+
+
+                <!--Change Password-->
+                <RelativeLayout
+                    android:id="@+id/rl_social_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/setting_top_bg"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/TextActivitySubHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dp_20"
+                            android:paddingTop="@dimen/dp_10"
+                            android:paddingEnd="@dimen/dp_20"
+                            android:paddingBottom="@dimen/dp_10"
+                            android:text="@string/change_password"
+                            android:textColor="@color/colorPrimaryLight"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_text">
+
+                        <LinearLayout
+                            android:id="@+id/ll_chgPwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal"
+                                android:paddingStart="@dimen/dp_20"
+                                android:paddingTop="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_20"
+                                android:paddingBottom="@dimen/dp_10">
+
+
+                                <TextView
+                                    android:id="@+id/txt_social_login"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_margin="@dimen/dp_5"
+                                    android:paddingStart="@dimen/dp_5"
+                                    android:paddingBottom="@dimen/dp_10"
+                                    android:text="@string/check_network"
+                                    android:textColor="@color/button_extra_color" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--Legal-->
+                <TextView
+                    style="@style/TextActivitySubHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:text="@string/legal"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/privacyTile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_10">
+
+                        <ImageView
+                            android:id="@+id/privacyIcon"
+                            android:layout_width="@dimen/dp_25"
+                            android:layout_height="@dimen/dp_25"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_document" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:layout_toEndOf="@id/privacyIcon"
+                            android:text="@string/privacy_policy"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/termsOfUseTile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dp_20"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingEnd="@dimen/dp_20"
+                        android:paddingBottom="@dimen/dp_10">
+
+                        <ImageView
+                            android:id="@+id/termsOfUseIcon"
+                            android:layout_width="@dimen/dp_25"
+                            android:layout_height="@dimen/dp_25"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_document" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:layout_toEndOf="@id/termsOfUseIcon"
+                            android:text="@string/terms_conditions"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

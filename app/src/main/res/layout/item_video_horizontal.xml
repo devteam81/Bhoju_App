@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/videoTileRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/imgCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/videoTileImg"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:background="@color/transparent"
+            android:src="@drawable/bhoju_placeholder_horizontal"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.SelectedCornerRadius"
+            android:transitionName="@string/transition_image"/>
+
+        <ImageView
+            android:id="@+id/imgRating"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/dp_5"
+            android:scaleType="fitXY"
+            android:src="@drawable/rating_a"
+            android:layout_alignEnd="@+id/videoTileImg"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgCard"
+        android:layout_alignStart="@+id/imgCard"
+        android:layout_alignEnd="@+id/imgCard"
+        android:layout_marginTop="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_5"
+        android:singleLine="true"
+        tools:text="Test"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        tools:ignore="MissingPrefix"
+        android:transitionName="@string/transition_title"/>
+</RelativeLayout>

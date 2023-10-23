@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/videoTileRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imgCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@android:color/black"
+        app:cardCornerRadius="@dimen/dp_10"
+        app:cardUseCompatPadding="true">
+
+        <com.skydoves.elasticviews.ElasticImageView
+            android:id="@+id/videoTileImg"
+            android:layout_width="100dp"
+            android:layout_height="140dp"
+            android:scaleType="fitXY"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgCard"
+        android:layout_alignStart="@+id/imgCard"
+        android:layout_alignEnd="@+id/imgCard"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        tools:text="Test"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        tools:ignore="MissingPrefix" />
+</RelativeLayout>

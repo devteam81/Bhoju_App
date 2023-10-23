@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MyPlansActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/myplans"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/autoRenewalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/auto_renewal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/autoRenewal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/white" />
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/autoRenewalLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myPlansRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_plan" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/noResultLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/no_plans_avaliable"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:drawableTopCompat="@drawable/no_result" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

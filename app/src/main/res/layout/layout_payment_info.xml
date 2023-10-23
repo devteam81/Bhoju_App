@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/payment"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/title"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/planName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/months"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:alpha="0.3"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/price"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/amountLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/total_amount"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/totalAmt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                tools:text="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/couponLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/coupon_code"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/couponCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                tools:text="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/couponAmtLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/coupon_amount"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/couponAmt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                tools:text="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/amount_deducted_from_referral"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/deductedAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                tools:text="0" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/totalAmtLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/amount_to_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                tools:text="0" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:alpha="0.3"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/gotCouponText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/got_a_coupon_code"
+            android:textColor="@color/Grey_500"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:id="@+id/beforeAppliedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/et_couponCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:hint="@string/coupon_code"
+                    android:inputType="textNoSuggestions|textCapCharacters"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/applyCode"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/appliedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/checkbox" />
+
+            <TextView
+                android:id="@+id/appliedCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                tools:text="Code" />
+
+            <TextView
+                android:id="@+id/successMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text=""
+                android:textColor="@color/green"
+                android:textSize="@dimen/sp_14" />
+
+
+            <Button
+                android:id="@+id/removeCode"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_background"
+                android:text="@string/remove"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginTop="200dp"
+        android:text="@string/pay_through"
+        android:textColor="@color/Grey_500"
+        android:textSize="@dimen/sp_12" />
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/btn_background"
+        android:text="@string/pay"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/layoutPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/paytm"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:text="@string/paytm"
+            android:textAllCaps="false"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/paypal"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:text="@string/paypal"
+            android:textAllCaps="false"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/stripe"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background"
+            android:text="@string/stripe"
+            android:textAllCaps="false"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/googlePay"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/btn_background"
+            android:text="@string/google_pay"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:textAllCaps="false"
+            android:paddingBottom="3dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

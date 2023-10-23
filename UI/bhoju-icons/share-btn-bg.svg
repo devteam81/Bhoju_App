@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="35" viewBox="0 0 38 35">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_6871" data-name="Path 6871" d="M139.189,16.395s4.5,15.386,20.739,7.2,17.261,5.009,17.261,5.009V10.017h-38Z" transform="translate(-139.189 -10.017)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="share-btn-bg" transform="translate(-62 -357)">
+    <rect id="Rectangle_255" data-name="Rectangle 255" width="38" height="35" rx="5" transform="translate(62 357)" fill="#00abb8"/>
+    <g id="Group_755" data-name="Group 755" transform="translate(62 357)">
+      <g id="Mask_Group_29" data-name="Mask Group 29" clip-path="url(#clip-path)">
+        <rect id="Rectangle_5" data-name="Rectangle 5" width="38" height="23.326" rx="5" transform="translate(0 0.156)" fill="#00edff"/>
+      </g>
+    </g>
+  </g>
+</svg>

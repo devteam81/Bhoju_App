@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activity.PlansActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            app:srcCompat="@drawable/ic_arrow_back"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:text="@string/subscribe"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_16"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_background"
+        android:scaleType="fitXY"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:id="@+id/swipe">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/plansList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_current_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="Your Current Subscription"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_24"
+                tools:ignore="HardcodedText"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/discountTimerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_20"
+                    android:background="@drawable/counter_bg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_2"
+                            android:background="@drawable/counter_num_bg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/counter_days"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_12"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_25"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="Days"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dp_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp_2"
+                            android:background="@drawable/counter_num_bg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/counter_hours"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_12"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_25"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="Hours"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dp_14" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/counter_num_bg"
+                            android:layout_margin="@dimen/dp_2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/counter_minute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_12"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_25"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="Minutes"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dp_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/counter_num_bg"
+                            android:layout_margin="@dimen/dp_2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/counter_sec"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_12"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dp_25"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:text="Seconds"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/dp_14" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:text="Your Discounted Plan"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_24"
+                    tools:ignore="HardcodedText"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/yellow"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_90"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/discounted_plan_border"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dp_5"
+                                android:text="Plans"
+                                android:textColor="@color/download_bg1"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_90"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/discounted_plan_border"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/dcPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dp_10"
+                                android:gravity="center"
+                                android:text="Discount"
+                                android:textColor="@color/download_bg1"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_90"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/discounted_plan_border"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Discounted Price"
+                                android:textColor="@color/download_bg1"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_90"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/discounted_plan_border"
+                            android:gravity="center">
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/discount_Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rl_subscribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_25"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="@dimen/dp_25"
+                    android:paddingBottom="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:background="@drawable/subscribe_bg">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_month_details"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/current_plan_name"
+                                android:layout_width="125dp"
+                                android:layout_height="45dp"
+                                android:layout_below="@+id/rl_details"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:ellipsize="marquee"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/dp_5"
+                                android:paddingEnd="@dimen/dp_5"
+                                android:paddingBottom="@dimen/dp_10"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/sp_14"
+                                android:textStyle="bold"
+                                tools:text="Introductory sge srgh sgh" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_details"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:background="@drawable/bg_subsribe_button_border">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_months"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/current_plan_months"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="@dimen/sp_25"
+                                        android:textStyle="bold"
+                                        tools:text="22" />
+
+                                    <TextView
+                                        android:id="@+id/current_plan_text_months"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="@string/months"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="@dimen/sp_12"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_amount_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_40"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:layout_toEndOf="@+id/rl_month_details"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_Amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginEnd="@dimen/dp_20"
+                                android:layout_marginBottom="@dimen/dp_5"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/current_plan_original_amount_rupee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/dp_2"
+                                    android:gravity="center"
+                                    android:text="@string/currency"
+                                    android:textColor="@color/theme_yellow"
+                                    android:textSize="@dimen/sp_20"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/current_plan_original_amount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/theme_yellow"
+                                    android:textSize="@dimen/sp_20"
+                                    android:textStyle="bold"
+                                    tools:text="100" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/current_plan_amount_rupee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/dp_2"
+                                    android:gravity="center"
+                                    android:text="@string/currency"
+                                    android:textColor="@color/theme_yellow"
+                                    android:textSize="@dimen/sp_24"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/current_plan_amount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textColor="@color/theme_yellow"
+                                    android:textSize="@dimen/sp_45"
+                                    android:textStyle="bold"
+                                    tools:text="100" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_amount_details"
+                            android:layout_marginStart="@dimen/dp_40"
+                            android:layout_toEndOf="@+id/rl_month_details"
+                            android:background="@drawable/button_big"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:text="Get Started"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/rl_subscribe"
+                    android:layout_alignEnd="@id/rl_subscribe"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:background="@drawable/subscription_text_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/current_txt_plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10"
+                        tools:text="@string/months" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unlimited access to All Content (No Auto-Renew)"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_15"
+                android:background="@drawable/discount_info_bg"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:background="@drawable/discountinfo_border"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_2"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txt_current_plan_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User ID"
+                            android:textAllCaps="true"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:textColor="#333"
+                            android:textSize="@dimen/sp_16"
+                            tools:ignore="HardcodedText"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/current_plan_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:lines="3"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold"
+                            tools:text="Basic" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:background="@drawable/discountinfo_border"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:id="@+id/txt_current_plan_order_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Order ID"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_16"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/current_plan_order_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_weight="1.3"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold"
+                            tools:text="Basic" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:padding="@dimen/dp_5"
+                        android:background="@drawable/discountinfo_border"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:weightSum="1">
+
+
+                        <TextView
+                            android:id="@+id/txt_current_plan_expiry_date"
+                            android:text="Expiry Date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:textColor="#333"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText"/>
+
+                        <TextView
+                            android:id="@+id/current_plan_expiry_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16"
+                            android:gravity="center"
+                            android:lines="3"
+                            android:textStyle="bold"
+                            tools:text="Basic" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:background="@drawable/discountinfo_border"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_5"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txt_current_plan_trans_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transactionid"
+                            android:textAllCaps="true"
+                            android:textColor="#333"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/sp_16"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/current_plan_trans_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:lines="3"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/sp_16"
+                            tools:text="Basic" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/noResultLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_plans_avaliable"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/sp_18"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:drawableTopCompat="@drawable/no_result" />
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_green"
+        android:layout_gravity="bottom"
+        android:text="@string/pay"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_20"
+        android:visibility="gone"/>
+</FrameLayout>

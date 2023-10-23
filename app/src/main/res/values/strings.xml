@@ -1,0 +1,452 @@
+<resources>
+    <string name="app_name">Bhoju</string>
+
+
+    <string name="something_went_wrong">Your internet may be down!.. Please check your connection.</string>
+
+    <!--Activity texts-->
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="mobileNo">Mobile No.</string>
+    <string name="regMobileNo">Registered Mobile No.</string>
+    <string name="enterOtp">Enter OTP here</string>
+    <string name="myplans">My Plans</string>
+    <string name="invoice">Invoice</string>
+    <string name="months">Months</string>
+    <string name="title">Title</string>
+    <string name="status">Status</string>
+    <string name="check_network">Check your internet</string>
+
+    <!--Drawer-->
+
+    <!--Fragment texts-->
+    <string name="name">Name</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="subject">Subject</string>
+    <string name="comment">Comment</string>
+    <string name="comment_new">Tell us more about your issue</string>
+    <string name="password_not_match">Password does not match</string>
+    <string name="failed_initialize">Failured to Initialize!</string>
+    <string name="more">More</string>
+    <string name="submit">Submit</string>
+    <string name="error_player">Youtube player error</string>
+    <string name="agree_text">I accept the</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="refund_policy">Refund Policy</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="cards">Cards</string>
+    <string name="manage_profile">Manage Profile</string>
+    <string name="ok">OK</string>
+    <string name="close">Close</string>
+    <string name="Continue">Continue</string>
+    <string name="exit">Exit</string>
+    <string name="skip">Skip</string>
+    <string name="update">Update</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="install">Install</string>
+    <string name="later">Not Now</string>
+    <string name="reason_to_report">Reason to report</string>
+    <string name="pay">Pay</string>
+    <string name="paytm">PAYTM</string>
+    <string name="card">Cards / UPI / Netbanking</string>
+    <string name="upi">Google Pay / UPI / WhatsApp UPI</string>
+    <string name="inApp">Google In-App Purchase</string>
+    <string name="spam_videos">Spam Videos</string>
+    <string name="coupon_amount">Coupon Amount: </string>
+    <string name="total_amount">Total Amount: </string>
+    <string name="cast">Cast</string>
+    <string name="genre">Genre</string>
+    <string name="apply">Apply Code</string>
+
+
+    <!--DONT TRANSLATE FROM HERE-->
+
+
+    <!--GCM Sender id DONT TRANSLATE-->
+
+    <!--Stripe creds Dont Translate-->
+    <string name="stripepk">pk_test_uDYrTXzzAuGRwDYtu7dkhaF3</string>
+
+    <!--Facebook, Dont translate-->
+    <string name="facebook_id">1125007921642260</string>
+    <string name="fb_login_protocol_scheme">fb1125007921642260</string>
+    <string name="facebook_client_token">29d2c6d7136ab6c49e0fcd719e1edbae</string>
+    <string name="kids">Kids</string>
+    <string name="parental_control">Enable Parental Control</string>
+    <string name="update_parental_control">Parental Control</string>
+    <!--<string name="no_videos_here">No videos here</string>-->
+    <string name="no_videos_here">NO VIDEO AVAILABLE AT THE MOMENT</string>
+    <string name="help">Help</string>
+    <string name="verify">Verify</string>
+    <string name="setup">Setup Now</string>
+    <string name="checkbox_dont_show">Don\'t show again</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_new">Sign Up!</string>
+    <string name="create_account">Create an account</string>
+    <string name="account_login">Already have an account?</string>
+    <string name="account_signup">Don\'t have an account?</string>
+    <string name="forgot_password_label">Forgot Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_your_mobile_for_password">Enter Your Number to RESET the Password</string>
+    <string name="otp_verification">OTP VERIFICATION</string>
+    <string name="otp_verification_msg">Enter 6-digit code we sent to</string>
+    <string name="send_reset">Send OTP to Reset Password</string>
+    <string name="send_otp_again">Resend OTP</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="no_internet">No Internet</string>
+    <string name="press_back_again_exit">Press back again to exit</string>
+    <string name="series">Series</string>
+    <string name="films">Films</string>
+    <string name="search_hint">Search Here</string>
+    <string name="manage_profile_text">Manage Profiles</string>
+    <string name="delete_account_confirmation">Delete Confirmation</string>
+    <string name="enter_password_to_delete">Enter password to delete account</string>
+    <string name="logout_confirmation">Logout Confirmation</string>
+    <string name="sure_to_text">Are you sure to Logout from</string>
+    <string name="card_number">Card Number</string>
+    <string name="email_cant_be_empty">Email can\'t be empty</string>
+    <string name="password_cant_be_empty">Password can\'t be empty</string>
+    <string name="enter_valid_email">Please enter a valid email</string>
+    <string name="enter_phone_no">Please enter a Phone</string>
+    <string name="enter_otp">Please enter a OTP</string>
+    <string name="minimum_six_otp_characters">OTP must be six characters</string>
+    <string name="minimum_six_characters">Password must be minimum six characters</string>
+    <string name="match_passwords">Password does not match</string>
+    <string name="select_query">Please select query type</string>
+    <string name="names_cant_be_empty">Name can\'t be empty</string>
+    <string name="comment_cant_be_empty">Comment can\'t be empty</string>
+    <string name="network_check_success">Check your network</string>
+    <string name="enter_valid_days">Validity Days can\'t be empty</string>
+    <string name="valid_days_hint">Enter Validity</string>
+    <string name="valid_days"> (Mention in days)</string>
+
+    <string name="test_again">Test Again</string>
+    <string name="start_test">Start Test</string>
+    <string name="bebu_android_server">Bhoju Android server</string>
+    <string name="internet_connection">Internet Connection</string>
+    <string name="test_failed_description">Test your internet connection</string>
+    <string name="check_your_network_title">Check your Network</string>
+    <string name="expiry">Expiry</string>
+    <string name="select">Select</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Re-type new Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="update_password">Update Password</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="confirm">Click here to Confirm</string>
+    <string name="click_to_accept">Click here to Accept</string>
+
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="paypal">Paypal</string>
+    <string name="stripe">Stripe</string>
+    <string name="google_pay">Google pay</string>
+
+    <string name="payment_failed">Payment Failed!</string>
+    <string name="raise_ticket">Kindly raise a support ticket if your account has been changed.</string>
+    <string name="raise_support_ticket">Raise a Support Ticket</string>
+
+    <string name="payment_success">Payment Successful!</string>
+
+    <string name="query_type">Query Type</string>
+
+    <string name="payment_id">Payment Id</string>
+    <string name="payment_mode">Payment Mode</string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="login_again_with_new_password">Password changed. Please login again with new password!</string>
+    <string name="auto_renewal">Auto Renewal</string>
+    <string name="warning_popup_1">This is A-rated movie</string>
+    <string name="warning_popup_2">Press Yes to continue.</string>
+    <string name="forgot_popup_1">Continue with Reset?</string>
+    <string name="forgot_popup_2">Warning: After this operation you need to login again.</string>
+    <string name="video_18_plus">This video contains 18+ content. Please make sure you are 18+</string>
+    <string name="terms_and_privacypolicy">I accept the Terms &amp; Conditions and</string>
+    <!--<string name="terms_privacy_policy">and Privacy Policy</string>-->
+    <string name="terms_privacy_policy">Privacy Policy</string>
+    <string name="agree_the_terms_and_condition">Please agree the Terms and Conditions and Privacy Policy</string>
+    <string name="email_notifications">Email Notifications</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="no_plans_avaliable">No Plans Available</string>
+    <string name="amount">Amount</string>
+    <string name="paid_date">Paid Date</string>
+    <string name="no_notifications">No Notifications</string>
+    <string name="not_available">Not Available</string>
+    <string name="about">About</string>
+    <string name="speed_test">Speed Test</string>
+    <string name="no_cards_added">No cards found</string>
+    <string name="cvv">CVV</string>
+    <string name="xxxx_xxxx">xxxx-xxxx-xxxx-xxxx</string>
+    <string name="card_hider_text">XXXX - XXXX - XXXX - </string>
+    <string name="who_s_watching">Who\'s watching?</string>
+    <string name="remove">Remove</string>
+    <string name="autoRenewalMsg">Are you sure you want to enable auto renewal?</string>
+    <string name="cancelRenewal">Are you sure you want to cancel auto renewal?</string>
+    <string name="no_of_accounts">No of Accounts:</string>
+    <string name="channel_name">Downloads</string>
+    <string name="download">Download</string>
+    <string name="downloading">Downloading</string>
+    <string name="download_started">Download has been started</string>
+    <string name="download_open">Open Downloads</string>
+    <string name="download_cancelled">Download cancelled</string>
+    <string name="no_suitable_download_urls">We couldn\'t find any suitable download URLs for this video. We will add it soon.</string>
+    <string name="choose_download_quality">Choose download quality</string>
+    <string name="no_videos">NO VIDEO AVAILABLE AT THE MOMENT</string>
+    <string name="offline_videos">Downloads</string>
+    <string name="problem_with_downloaded_video">Some problem with the downloaded video</string>
+    <string name="delete_from_offline">Remove from Offline</string>
+    <string name="choose_plan">Choose Plan</string>
+    <string name="my_plans">My Plans</string>
+    <string name="delete">Delete</string>
+    <string name="delete_sub_profile">Delete Sub profile</string>
+    <string name="delete_confirmation">Delete confirmation</string>
+    <string name="login_cancelled">Login Cancelled</string>
+    <string name="add_card_title">Add Card</string>
+    <string name="change_pass">Are you sure you want to change the password?</string>
+    <string name="enter_a_name">Name</string>
+    <string name="login">Login</string>
+    <string name="login_new">Login!</string>
+    <string name="phone_cant_be_stuff">Phone number must be within 6–16 digits</string>
+    <string name="app_settings">App Settings</string>
+    <string name="app_support">Support / Help</string>
+    <string name="account">Account</string>
+    <string name="notifications">Notifications</string>
+    <string name="log_out">Logout</string>
+    <string name="another_device">You logged in another Device!</string>
+    <string name="pay_through">Pay through</string>
+    <string name="price">Price</string>
+    <string name="got_a_coupon_code">Got a Coupon Code?</string>
+    <string name="coupon_apply_successful">Coupon code applied successfully!…</string>
+    <string name="amount_to_pay">To Pay</string>
+    <string name="invalid_payment">Invalid Payment</string>
+    <string name="success">Success</string>
+    <string name="paid_amount">Paid Amount</string>
+    <string name="please_reopen">Please reopen the page.</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="watch_video">Watch video</string>
+    <string name="payment">Payment</string>
+    <string name="spam_video">Spam video</string>
+    <string name="payment_type">Payment Type</string>
+    <string name="update_language">Update Language</string>
+    <string name="view_plans">View Plans</string>
+    <string name="multiLanguage">App Language</string>
+    <string name="player">Player</string>
+    <string name="picture_in_picture_mode">Enter Picture-In-Picture mode when minimized</string>
+    <string name="copiedToClipboard">Code is Copied to Clipboard</string>
+    <string name="yourRemaningBal">Your remaining balance is</string>
+    <string name="amount_deducted_from_referral">Amount Deducted from Referral</string>
+    <string name="enter_valid_expiry_date">Enter valid expiry date for the card.</string>
+    <string name="Enter_valid_card_details">Enter valid card details.</string>
+    <string name="enter_valid_expiry_date_for_the_card">Enter valid expiry date for the card. Check \'/\' symbol</string>
+    <string name="are_you_sure_to_clear_your_history">Are you sure to clear your History?</string>
+    <string name="are_you_sure_to_your_sub_profile">Are you sure to delete your Sub profile?</string>
+    <string name="need_subcripton">Need Subscription</string>
+    <string name="you_need_subcribe_to_a_plan">You need to subscribe to a plan to be able to download this video. Would you want to subscribe?</string>
+    <string name="need_payment">Need payment</string>
+    <string name="you_need_to_pay_for_this_video">You need to pay for this video to be able to download it</string>
+    <string name="check_out_this_video">Check out this video: </string>
+    <string name="are_you_sure_to_delete_the_video_from_offline">Are you sure to delete the video from offline?</string>
+    <string name="you_have_marked_this_video_as_spam">You have marked this video as spam. You want to continue watching?</string>
+    <string name="are_you_sure_to_clear_spam">Are you sure to clear Spam?</string>
+    <string name="are_you_sure_to_clear_wishlist">Are you sure to clear WishList?</string>
+    <string name="are_you_sure_you_want_to_pay">\"Are you sure you want to pay \"</string>
+    <string name="sorry_no_apps_to_perfrom">Sorry..No apps to perform Image picking.</string>
+    <string name="support_message">Your query has been submitted successfully.</string>
+    <string name="add_card">Add Card</string>
+    <string name="about_device">About device</string>
+    <string name="device">Device</string>
+    <string name="diagnostics">Diagnostics</string>
+    <string name="offline_video_validity">Offline Video Validity</string>
+    <string name="update_video_validity">Update Offline Video Validity</string>
+    <string name="legal">Legal</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="picture">Picture</string>
+    <string name="webview">Webview</string>
+    <string name="settings">Settings</string>
+    <string name="view_details">View Details</string>
+    <string name="ppv_type">PPV Type</string>
+    <string name="per_month">/Per Month</string>
+    <string name="language_chng">You changed Language…</string>
+    <string name="sub_profile">Sub Profile is added....</string>
+    <string name="description">Description</string>
+    <string name="needPermissionToAccessYourSms">Need permission to access your sms</string>
+    <string name="needPermissionToAccessYourStoarge">Need permission to access your storage</string>
+    <string name="needPermissionToKeepNotified">Need permission to keep you notified</string>
+
+    <string name="an_unexpected_error_occured">An unexpected error occurred</string>
+    <string name="restart_app">Restart App</string>
+    <string name="close_app">Close App</string>
+    <string name="try_again">Try Again</string>
+    <string name="added_history">Added to history:</string>
+    <string name="couldnot_added">Could not be added to history: </string>
+    <string name="welcome_new">Welcome!</string>
+    <string name="welcome">Welcome,</string>
+    <string name="playstore_link">https://play.google.com/store/apps/details?id=com.bhoju.app</string>
+    <string name="wrong_invoice">Something went wrong while showing invoice. Payment is done.</string>
+    <string name="payment_cancle">Payment cancelled</string>
+    <string name="canclePay">cancelled payment</string>
+    <string name="you_earn">You\'ve Earned</string>
+    <string name="remaining">Remaining</string>
+    <string name="referandearn">Refer and Earn</string>
+    <string name="copy">Copy</string>
+    <string name="share">Share</string>
+    <string name="share_link">SHARE LINK</string>
+    <string name="share_this_code">Share this code so your friends can join conversation around all your favorite TV shows and movies</string>
+    <string name="discount_referral">Discount from Referral</string>
+    <string name="no_of_profile">Number of Sub Profiles:</string>
+    <string name="play_automatically">If video doesn\'t play automatically, Please reopen the video page and play manually</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="thePaymentHasBeenCancelled">The payment is been cancelled.</string>
+    <string name="continue_with">OR</string>
+    <string name="home">Home</string>
+    <string name="comingSoon">ComingSoon</string>
+    <string name="search">Search</string>
+    <string name="your_videos">Downloads</string>
+    <string name="most_search">Most Search Videos</string>
+    <string name="story_line">Story Line</string>
+    <string name="info_line">Info</string>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="watch_next">Watch Next</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="login_register">Login / Register</string>
+    <string name="track_selection_title">Select tracks</string>
+    <string name="ComingSoon">Coming Soon </string>
+
+    <string name="create_lock_pin">Create Pattern Lock PIN</string>
+
+    <string name="inr">*Price in INR</string>
+    <string name="currency">₹</string>
+
+    <string name="remove_pin">Remove PIN</string>
+
+    <string name="enter_pattern">Enter Pattern Lock PIN</string>
+    <string name="unlock_app">Unlock Your App</string>
+    <string name="disable_lock">Disable Pattern Lock</string>
+    <string name="forgot_pin">Forgot PIN?</string>
+
+    <string name="are_you_sure">Are you Sure?</string>
+    <string name="no_internet_common">Opps!! No internet</string>
+    <string name="check_internet">Please check your Internet connection and try again</string>
+
+    <!-- Transition -->
+    <string name="transition_image">Image</string>
+    <string name="transition_title">Title</string>
+
+    <!-- Extra -->
+    <string name="play">Play</string>
+    <string name="mmyy">MM/YY</string>
+
+    <string name="rating_a_18">Rated : A | 18+</string>
+    <string name="rating_ua_16">Rated : U/A | 16+</string>
+    <string name="rating_u_12">Rated : U | 12+</string>
+    <string name="rating_kids">Rated : U | Eligible for Kids</string>
+
+    <string name="rating_a_18_video">Rated A | 18+</string>
+    <string name="rating_ua_16_video">Rated U/A | 16+</string>
+    <string name="rating_u_12_video">Rated U | 12+</string>
+    <string name="rating_kids_video">Rated U | Eligible for Kids</string>
+
+    <string name="watch_full_video"><![CDATA[Click Here\n& Watch\nFull Video]]></string>
+
+    <string name="digits">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="select_age">Select Your Age</string>
+    <string-array name="ageList">
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+
+    </string-array>
+
+</resources>

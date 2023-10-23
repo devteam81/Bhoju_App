@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ageItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    tools:context=".ui.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/ageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:background="@color/colorPrimary"
+        tools:text="@tools:sample/first_names" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@color/white"
+        android:layout_below="@+id/ageName"/>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="@dimen/dp_16"
+    android:background="@drawable/bg_medium">
+
+    <LinearLayout
+        android:id="@+id/ll_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/dp_10"
+            android:gravity="end">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_validity_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_16"
+                android:hint="@string/valid_days_hint"
+                android:inputType="number"
+                android:maxLength="10"
+                android:backgroundTint="@color/button_extra_color"
+                android:textColor="@color/white"
+                android:textColorHint="@color/button_extra_color"
+                android:textCursorDrawable="@color/white"
+                android:textColorHighlight="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/valid_days"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/sp_14"
+                android:textStyle="bold"
+                android:padding="@dimen/dp_5"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/txtSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:background="@drawable/button_3"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

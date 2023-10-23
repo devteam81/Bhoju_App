@@ -1,0 +1,215 @@
+<resources>
+    <string name="app_name">Bhoju</string>
+
+
+    <string name = "something_went_wrong"> ¡Su Internet puede estar caído! .. Compruebe su conexión. </string>
+
+    <!--Activity texts-->
+    <string name = "sign_in"> Iniciar sesión </string>
+    <string name = "password"> Contraseña </string>
+    <string name = "email"> Correo electrónico </string>
+    <string name = "myplans"> Mis planes </string>
+    <string name = "invoice"> Factura </string>
+    <string name = "months"> Meses </string>
+    <string name = "title"> Título </string>
+    <string name = "status"> Estado </string>
+    <string name = "check_network"> Verifique su internet </string>
+
+    <!--Drawer-->
+
+    <!--Fragment texts-->
+    <string name = "name"> Nombre </string>
+    <string name = "password_not_match"> La contraseña no coincide </string>
+    <string name = "more"> Más </string>
+    <string name = "submit"> Enviar </string>
+    <string name = "terms_conditions"> Términos y amp; Condiciones </string>
+    <string name = "privacy_policy"> Política de privacidad </string>
+    <string name = "confirmation"> Confirmación </string>
+    <string name = "no"> No </string>
+    <string name = "yes"> Sí </string>
+    <string name = "cards"> Tarjetas </string>
+    <string name = "manage_profile"> Administrar perfil </string>
+    <string name = "ok"> OK </string>
+    <string name = "reason_to_report"> Motivo para informar </string>
+    <string name = "pay"> Pagar </string>
+    <string name = "paytm"> Paytm </string>
+    <string name = "spam_videos"> Videos de spam </string>
+    <string name = "coupon_amount"> Cantidad del cupón: </string>
+    <string name = "total_amount"> Cantidad total: </string>
+    <string name = "cast"> Cast </string>
+    <string name = "apply"> Aplicar código </string>
+
+
+    <!--DONT TRANSLATE FROM HERE-->
+
+
+    <!--GCM Sender id DONT TRANSLATE-->
+
+    <!--Stripe creds Dont Translate-->
+    <string name="stripepk">pk_test_uDYrTXzzAuGRwDYtu7dkhaF3</string>
+
+    <!--Facebook, Dont translate-->
+    <string name = "facebook_id"> 351518151959383 </string>
+    <string name = "kids"> Niños </string>
+    <string name = "no_videos_here"> No hay videos aquí </string>
+    <string name = "help"> Ayuda </string>
+    <string name = "sign_up"> Registrarse </string>
+    <string name = "account_login"> ¿Ya es miembro? Iniciar sesión </string>
+    <string name = "forgot_password"> ¿Olvidó su contraseña? </string>
+    <string name = "enter_your_mobile_for_password"> Ingrese su correo electrónico para restablecer la contraseña </string>
+    <string name = "no_internet"> Sin Internet </string>
+    <string name = "press_back_again_exit"> Presione de nuevo para salir </string>
+    <string name = "series"> Series </string>
+    <string name = "films"> Películas </string>
+    <string name = "search_hint"> Ingrese algo … </string>
+    <string name = "manage_profile_text"> Administrar perfiles </string>
+    <string name = "delete_account_confirmation"> Eliminar confirmación </string>
+    <string name = "enter_password_to_delete"> Ingrese la contraseña para eliminar la cuenta </string>
+    <string name = "logout_confirmation"> Confirmación de cierre de sesión </string>
+    <string name = "sure_to_text"> ¿Está seguro de cerrar sesión en </string>
+    <string name = "card_number"> Número de tarjeta </string>
+    <string name = "email_cant_be_empty"> El correo electrónico no puede estar vacío </string>
+    <string name = "password_cant_be_empty"> La contraseña no puede estar vacía </string>
+    <string name = "enter_valid_email"> Ingrese un correo electrónico válido </string>
+    <string name = "enter_phone_no"> Ingrese un teléfono </string>
+    <string name = "minimum_six_characters"> La contraseña debe tener un mínimo de seis caracteres </string>
+    <string name = "names_cant_be_empty"> El nombre no puede estar vacío </string>
+    <string name = "network_check_success"> Verificación de red exitosa </string>
+    <string name = "test_again"> Pruebe de nuevo </string>
+    <string name = "start_test"> Iniciar prueba </string>
+    <string name = "bebu_android_server"> Servidor Bhoju de Android </string>
+    <string name = "internet_connection"> Conexión a Internet </string>
+    <string name = "check_your_network_title"> Verifique su red </string>
+    <string name = "expiry"> Caducidad </string>
+    <string name = "select"> Seleccionar </string>
+    <string name = "old_password"> Contraseña anterior </string>
+    <string name = "new_password"> Nueva contraseña </string>
+    <string name = "confirm_password"> Vuelva a escribir la nueva contraseña </string>
+    <string name = "change_password"> Cambiar contraseña </string>
+    <string name = "save_profile"> Guardar perfil </string>
+    <string name = "paypal"> Paypal </string>
+    <string name = "stripe"> Stripe </string>
+    <string name = "payment_id"> ID de pago </string>
+    <string name = "payment_mode"> Modo de pago </string>
+    <string name = "coupon_code"> Código de cupón </string>
+    <string name = "login_again_with_new_password"> Contraseña modificada. ¡Vuelva a iniciar sesión con una nueva contraseña! </string>
+    <string name = "auto_renewal"> Renovación automática </string>
+    <string name = "terms_and_privacypolicy"> Al registrarse, acepta nuestros Términos y política de privacidad </string>
+    <string name = "agree_the_terms_and_condition"> Acepte los Términos y condiciones y la Política de privacidad </string>
+    <string name = "email_notifications"> Notificaciones por correo electrónico </string>
+    <string name = "push_notifications"> Notificaciones Push </string>
+    <string name = "no_plans_avaliable"> No hay planes disponibles </string>
+    <string name = "amount"> Cantidad </string>
+    <string name = "paid_date"> Fecha de pago </string>
+    <string name = "no_notifications"> Sin notificaciones </string>
+    <string name = "about"> Acerca de </string>
+    <string name = "speed_test"> Prueba de velocidad </string>
+    <string name = "no_cards_added"> No se encontraron tarjetas </string>
+    <string name = "cvv"> CVV </string>
+    <string name = "xxxx_xxxx"> xxxx-xxxx-xxxx-xxxx </string>
+    <string name = "card_hider_text"> XXXX - XXXX - XXXX - </string>
+    <string name = "who_s_watching"> ¿Quién está mirando? </string>
+    <string name = "remove"> Eliminar </string>
+    <string name = "autoRenewalMsg"> ¿Está seguro de que desea habilitar la renovación automática? </string>
+    <string name = "cancelRenewal"> ¿Está seguro de que desea cancelar la renovación automática? </string>
+    <string name = "no_of_accounts"> No de cuentas: </string>
+    <string name = "channel_name"> Descargas </string>
+    <string name = "download_cancelled"> Descarga cancelada </string>
+    <string name = "no_suitable_download_urls"> No pudimos encontrar ninguna URL de descarga adecuada para este video. Lo agregaremos pronto. </string>
+    <string name = "choose_download_quality"> Elija la calidad de descarga </string>
+    <string name = "offline_videos"> Descargas </string>
+    <string name = "problem_with_downloaded_video"> Algún problema con el video descargado </string>
+    <string name = "delete_from_offline"> Eliminar de fuera de línea </string>
+    <string name = "choose_plan"> Elegir plan </string>
+    <string name = "my_plans"> Mis planes </string>
+    <string name = "delete_sub_profile"> Eliminar subperfil </string>
+    <string name = "delete_confirmation"> Eliminar confirmación </string>
+    <string name = "login_cancelled"> Inicio de sesión cancelado </string>
+    <string name = "add_card_title"> Agregar tarjeta </string>
+    <string name = "change_pass"> ¿Está seguro de que desea cambiar la contraseña? </string>
+    <string name = "enter_a_name"> Nombre </string>
+    <string name = "login"> Iniciar sesión </string>
+    <string name = "phone_cant_be_stuff"> El número de teléfono debe tener entre 6 y 16 dígitos </string>
+    <string name = "app_settings"> Configuración de la aplicación </string>
+    <string name = "account"> Cuenta </string>
+    <string name = "notifications"> Notificaciones </string>
+    <string name = "log_out"> Cerrar sesión </string>
+    <string name = "pay_through"> Pagar a través de </string>
+    <string name = "price"> Precio </string>
+    <string name = "got_a_coupon_code"> ¿Tienes un código de cupón? </string>
+    <string name = "coupon_apply_successful"> ¡El código de cupón se aplicó con éxito! … </string>
+    <string name = "amount_to_pay"> Para pagar </string>
+    <string name = "invalid_payment"> Pago no válido </string>
+    <string name = "success"> Success </string>
+    <string name = "paid_amount"> Monto pagado </string>
+    <string name = "please_reopen"> Vuelva a abrir la página. </string>
+    <string name = "dismiss"> Descartar </string>
+    <string name = "watch_video"> Ver video </string>
+    <string name = "payment"> Pago </string>
+    <string name = "spam_video"> Video spam </string>
+    <string name = "payment_type"> Tipo de pago </string>
+    <string name = "update_language"> Actualizar idioma </string>
+    <string name = "view_plans"> Ver planes </string>
+    <string name = "multiLanguage"> Idioma de la aplicación </string>
+    <string name = "player"> Player </string>
+    <string name = "picture_in_picture_mode"> Ingrese al modo Imagen en imagen cuando esté minimizado </string>
+    <string name = "copiedToClipboard"> El código se copia al portapapeles </string>
+    <string name = "yourRemaningBal"> Su saldo restante es </string>
+    <string name = "amount_deducted_from_referral"> Cantidad deducida de la referencia </string>
+    <string name = "enter_valid_expiry_date"> Ingrese una fecha de vencimiento válida para la tarjeta. </string>
+    <string name = "Enter_valid_card_details"> Ingrese detalles válidos de la tarjeta. </string>
+    <string name = "enter_valid_expiry_date_for_the_card"> Ingrese una fecha de vencimiento válida para la tarjeta. Verifique el símbolo  </string>
+    <string name = "are_you_sure_to_clear_your_history"> ¿Está seguro de borrar su historial? </string>
+    <string name = "are_you_sure_to_your_sub_profile"> ¿Está seguro de eliminar su Sub perfil? </string>
+    <string name = "need_subcripton"> Necesita suscripción </string>
+    <string name = "you_need_subcribe_to_a_plan"> Debe suscribirse a un plan para poder descargar este video. ¿Desea suscribirse? </string>
+    <string name = "need_payment"> Necesita pago </string>
+    <string name = "you_need_to_pay_for_this_video"> Debe pagar este video para poder descargarlo </string>
+    <string name = "check_out_this_video">Mira este video: </string>
+    <string name = "are_you_sure_to_delete_the_video_from_offline"> ¿Está seguro de eliminar el video fuera de línea? </string>
+    <string name = "you_have_marked_this_video_as_spam"> Ha marcado este video como spam. ¿Quieres seguir viendo? </string>
+    <string name = "are_you_sure_to_clear_spam"> ¿Está seguro de borrar el spam? </string>
+    <string name = "are_you_sure_to_clear_wishlist"> ¿Está seguro de borrar WishList? </string>
+    <string name = "are_you_sure_you_want_to_pay"> \ "¿Está seguro de que desea pagar \" </string>
+    <string name = "sorry_no_apps_to_perfrom"> Lo siento … No hay aplicaciones para realizar la selección de imágenes. </string>
+    <string name = "add_card"> Agregar tarjeta </string>
+    <string name = "about_device"> Acerca del dispositivo </string>
+    <string name = "device"> Dispositivo </string>
+    <string name = "diagnostics"> Diagnóstico </string>
+    <string name = "legal"> Legal </string>
+    <string name = "cancel"> Cancelar </string>
+    <string name = "save"> Guardar </string>
+    <string name = "picture"> Imagen </string>
+    <string name = "webview"> Webview </string>
+    <string name = "settings"> Configuración </string>
+    <string name = "view_details"> Ver detalles </string>
+    <string name = "ppv_type"> Tipo de PPV </string>
+    <string name = "per_month"> / Per Month </string>
+    <string name = "language_chng"> Cambiaste el idioma … </string>
+    <string name = "sub_profile"> Se agrega subperfil … </string>
+    <string name = "description"> Descripción </string>
+    <string name = "needPermissionToAccessYourStoarge"> Necesita permiso para acceder a su almacenamiento </string>
+
+    <string name = "an_unexpected_error_occured"> Se produjo un error inesperado </string>
+    <string name = "restart_app"> Reiniciar la aplicación </string>
+    <string name = "close_app"> Cerrar aplicación </string>
+    <string name = "try_again"> Inténtalo de nuevo </string>
+    <string name = "welcome"> Bienvenido, </string>
+    <string name="referandearn">Refiera y gane</string>
+    <string name="you_earn">Usted ha ganado</string>
+    <string name="copy">Copiar</string>
+    <string name="share_link">COMPARTIR ENLACE</string>
+    <string name = "playstore_link"> https://play.google.com/store/apps/details?id=com.bhoju.app </string>
+    <string name = "wrong_invoice"> Algo salió mal al mostrar la factura. El pago está hecho. </string>
+    <string name = "payment_cancle"> Pago cancelado </string>
+    <string name = "canclePay"> pago cancelado </string>
+    <string name="share_this_code">Comparta este código para que sus amigos puedan unirse a la conversación sobre todos sus programas de TV y películas favoritas.</string>
+    <string name="discount_referral">Descuento por referencia</string>
+    <string name="no_of_profile">Número de subperfiles:</string>
+    <string name="play_automatically">Si el video no se reproduce automáticamente, vuelva a abrir la página del video y reprodúzcalo manualmente</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name = "hello_blank_fragment"> Hola fragmento en blanco </string>
+    <string name = "thePaymentHasBeenCancelled"> El pago se ha cancelado. </string>
+
+</resources>

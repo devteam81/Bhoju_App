@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/discount_Layout"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/download_bg1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="match_parent"
+            android:background="@drawable/discounted_plan_border"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/dcMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_2"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/llDcMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_2"
+                android:text="month"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="match_parent"
+            android:background="@drawable/discounted_plan_border"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/discount_Anim"
+                android:layout_width="wrap_content"
+                android:background="@drawable/cloud"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/dcPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/download_bg1"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="@color/download_bg1"
+                        android:textSize="@dimen/sp_20"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/discounted_plan_border"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/dcOriginalPrice_Currency"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/dp_5"
+                    android:text="@string/currency"
+                    android:textSize="@dimen/dp_15"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nonDc_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingEnd="5dp"
+                    android:text="100/-"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_15"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/discount_button_boreder"
+                android:layout_margin="@dimen/dp_5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/discountPrice_Currency"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_5"
+                    android:text="@string/currency"
+                    android:textSize="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_2"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dcPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingEnd="5dp"
+                    android:text="1000/-"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_16"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="match_parent"
+            android:background="@drawable/discounted_plan_border"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/dcRenew"
+                android:layout_width="74dp"
+                android:layout_height="30dp"
+                android:text="Renew"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:padding="@dimen/dp_2"
+                android:background="@drawable/renew_btn"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

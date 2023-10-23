@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/design_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_25">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_70"
+        android:layout_alignParentEnd="true">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/userPicture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border="false" />
+
+        <!--<androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/transparentblack"
+            card_view:cardBackgroundColor="@color/transparentblack"
+            card_view:cardCornerRadius="50dp" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@null"/>
+
+        </androidx.cardview.widget.CardView>-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_edit_details"
+            android:tint="@color/theme_yellow"
+            android:layout_margin="@dimen/dp_2"
+            android:layout_alignEnd="@+id/userPicture"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_medium"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:backgroundTint="@color/editTextColor"
+            android:drawableStart="@drawable/ic_user_profile"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="@string/full_name"
+            android:digits="@string/digits"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_16"
+            android:textColor="@color/white"
+            android:textColorHint="@color/editTextColor"
+            android:textSize="@dimen/sp_16" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:backgroundTint="@color/editTextColor"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="@string/email"
+            android:inputType="none"
+            android:maxLength="100"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_16"
+            android:singleLine="true"
+            android:textColor="@color/Grey_400"
+            android:textColorHint="@color/editTextColor"
+            android:textSize="@dimen/sp_16" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:backgroundTint="@color/editTextColor"
+            android:drawableStart="@drawable/ic_mobile"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="@string/mobileNo"
+            android:inputType="none"
+            android:maxLength="16"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_16"
+            android:textColor="@color/Grey_400"
+            android:textColorHint="@color/editTextColor"
+            android:textSize="@dimen/sp_16" />
+
+        <Button
+            android:id="@+id/save_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_big"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_10"
+            android:text="@string/save_profile"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/change_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:background="@drawable/button_big"
+        android:gravity="center_horizontal"
+        android:text="@string/change_password"
+        android:textAllCaps="false"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"/>
+
+
+    <TextView
+        android:id="@+id/social_login_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_100"
+        tools:text="You have registered using your GOOGLE Social Account, you can't set or change password for social accounts."
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/theme_yellow"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

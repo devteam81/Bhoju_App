@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-15dp"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.activity.LoginActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_background"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bottom_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-10dp"
+        android:visibility="visible"/>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/top_bg"
+                android:visibility="visible"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_40"
+                android:paddingStart="@dimen/dp_16"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/theme_yellow"
+                    android:text="@string/welcome_new"
+                    android:textSize="@dimen/sp_14"
+                    android:textStyle="bold"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/theme_yellow"
+                    android:text="@string/sign_in"
+                    android:textSize="@dimen/sp_24"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_10"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_60"
+                android:layout_marginTop="-10dp"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/ll_welcome"
+                android:gravity="center"
+                android:baselineAligned="false">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Login with Social media"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_google_sign"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/bg_background_popup_signin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_5">
+
+
+                        <ImageView
+                            android:id="@+id/btn_google_sign"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/google_sign" />
+
+                        <TextView
+                            android:id="@+id/txtGoogle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:text="@string/google"
+                            android:textColor="@color/color_blue"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_facebook_sign"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/bg_background_popup_signin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_5">
+
+
+                        <ImageView
+                            android:id="@+id/btn_facebook"
+                            android:layout_width="@dimen/dp_24"
+                            android:layout_height="@dimen/dp_24"
+                            android:src="@drawable/facebook_sign" />
+
+                        <TextView
+                            android:id="@+id/txtFacebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:text="@string/facebook"
+                            android:textColor="@color/color_blue"
+                            android:textSize="@dimen/sp_18"
+                            android:textStyle="bold"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/circle_new"
+                    android:layout_marginTop="@dimen/dp_12">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_10"
+                        android:text="@string/continue_with"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/button_extra_color"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_30"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/regMobileNo"
+                        android:inputType="phone"
+                        android:maxLength="16"
+                        android:paddingEnd="@dimen/dp_10"
+                        android:paddingBottom="@dimen/dp_16"
+                        android:drawableStart="@drawable/ic_mobile"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/editTextColor"
+                        android:backgroundTint="@color/editTextColor"
+                        android:layout_marginTop="@dimen/dp_16" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:paddingEnd="@dimen/dp_10"
+                            android:paddingBottom="@dimen/dp_16"
+                            android:drawableStart="@drawable/ic_password"
+                            android:drawablePadding="@dimen/dp_10"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/editTextColor"
+                            android:backgroundTint="@color/editTextColor"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_eye_hide"
+                            android:layout_marginEnd="@dimen/dp_20"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/forgot_pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/theme_yellow"
+                        android:textSize="@dimen/sp_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/submit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                        <TextView
+                            android:id="@+id/txt_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_3"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:text="@string/login"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_16"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textColor="@color/button_extra_color"
+                            android:text="@string/account_signup"
+                            android:textSize="@dimen/sp_13" />
+
+                        <TextView
+                            android:id="@+id/signup_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dp"
+                            android:textColor="@color/theme_yellow"
+                            android:text="@string/sign_up"
+                            android:textSize="@dimen/sp_14"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/create_account"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/white"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sign_up"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/colorAccent"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dp_5"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="here"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="@dimen/dp_5"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

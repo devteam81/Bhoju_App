@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SupportActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_background"
+        android:scaleType="fitXY"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                app:srcCompat="@drawable/ic_arrow_back"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="@string/app_support"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_16"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollSupportPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_support"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/query_type"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="@dimen/sp_20"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_15"/>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/ll_query_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:flexWrap="wrap"
+                    app:alignItems="stretch"
+                    app:alignContent="stretch"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginBottom="@dimen/dp_10"/>
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/full_name"
+                    android:digits="@string/digits"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_16"
+                    android:drawableStart="@drawable/ic_user_profile"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/dark_gray"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_16"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/dark_gray"
+                    android:layout_marginTop="@dimen/dp_15" />
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/mobileNo"
+                    android:inputType="phone"
+                    android:maxLength="16"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_16"
+                    android:drawableStart="@drawable/ic_mobile"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/dark_gray"
+                    android:backgroundTint="@color/editTextColor"
+                    android:layout_marginTop="@dimen/dp_15" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:textColorHint="@color/colorPrimaryLight"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/ed_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/editTextColor"
+                        android:hint="@string/subject"
+                        android:inputType="textPersonName"
+                        android:maxLength="50"
+                        android:nextFocusDown="@id/ed_comment"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorPrimaryLight"
+                        android:textSize="@dimen/sp_16"
+                        android:autofillHints="" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="@string/comment_new"
+                    android:inputType="textMultiLine"
+                    android:maxLength="500"
+                    android:gravity="top"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_16"
+                    android:drawableStart="@drawable/ic_conversation"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/dark_gray"
+                    android:backgroundTint="@color/editTextColor"
+                    android:layout_marginTop="@dimen/dp_15"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subscribe_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_3"
+                    android:gravity="center_horizontal"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_8" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
